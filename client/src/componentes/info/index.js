@@ -2427,6 +2427,7 @@ export const InfoPacientes = () => {
                                         />
                                     )}
                                 </div>
+                                <br></br>
                             </div>
                         </div>
                     </div>
@@ -2451,7 +2452,7 @@ export const InfoPacientes = () => {
                         size="xl"
                     >
                         <Modal.Header closeButton className="custom-modal-header">
-                            <Modal.Title>{"Crear Sesión"}</Modal.Title>
+                            <Modal.Title>{sesionEditando ? "Editar Evento" : "Agregar Evento"}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="custom-modal-body">
                             <div>
@@ -2618,7 +2619,7 @@ export const InfoPacientes = () => {
                                                         setMigrante(value);
                                                     }
                                                 }}
-                                                className="inputTabla no-arrow" aria-label="Username" aria-describedby="basic-addon1" onWheel={(e) => e.target.blur()} />
+                                                className="inputTabla no-arrow " aria-label="Username" aria-describedby="basic-addon1" onWheel={(e) => e.target.blur()} />
                                         ) : (
                                             <input
                                                 type="number"

@@ -206,14 +206,16 @@ export const AgregarUsuario = () => {
             listaespera: listaespera,
             familia: familia,
         }).then(() => {
-            getEmpleados()
+            getEmpleados();
             limpiarCampos();
             Swal.fire({
                 title: "<strong>Registro exitoso!!</strong>",
                 html: "<i>El empleado <strong>" + nombre + "</strong> fue registrado con éxito!!!</i>",
                 icon: 'success',
                 timer: 3500
+                
             })
+
         });
 
         Axios.post("http://localhost:3001/riesgo", {
@@ -373,7 +375,6 @@ export const AgregarUsuario = () => {
             });
         }
     };
-
 
     const sumarIngresos = () => {
         const total =
@@ -1318,6 +1319,7 @@ export const AgregarUsuario = () => {
             </ul>
             <br></br>
             <div className='modalboton22b1'><Link to={`/todopacientes`} ><button class="btn btn" type="button" onClick={add}>Guardar</button></Link></div>
+            <br></br>
         </div>
 
 

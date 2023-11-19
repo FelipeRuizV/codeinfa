@@ -60,6 +60,11 @@ export const Pacientes = () => {
             }
         });
     };
+
+    const recargar = () =>{
+        window.location.reload();
+    }
+
     const [usuarios, setUsuarios] = useState([]);
     const getEmpleados = () => {
         Axios.get('http://localhost:3001/usuarios').then((response) => {
@@ -73,6 +78,7 @@ export const Pacientes = () => {
         console.log('Buskksksk', e.target.value)
         filtrar(e.target.value)
     }
+
     const filtrar = (terminoBusqueda) => {
         var resultadosBusqueda = empleadosList.filter((elemento) => {
             if (elemento.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
@@ -148,6 +154,7 @@ export const Pacientes = () => {
                                 </div>
                             </Col>
 
+                          
                         </Row>
                     </div>
                     <div className='table-container'>
@@ -175,7 +182,7 @@ export const Pacientes = () => {
                                         <th className="table-success" scope="col">ENCARGADO</th>
                                         <th className="table-success" scope="col">PRIORIDAD</th>
                                         <th className="table-success" scope="col">TELÉFONO</th>
-                                        <th className="table-success" scope="col" length="70px"></th>
+                                        <th className="table-success" scope="col" length="50px"></th>
                                     </tr>
                                 </thead>
                             )}

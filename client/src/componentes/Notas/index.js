@@ -273,7 +273,7 @@ export const Notas = () => {
             <div className='notas-container' style={{marginTop: '15px'}}> 
               {notas.map((val, key) => (
                 <div key={val.id} className='com' style={{ marginRight: '4px' }}>
-                  <Card style={{height:'300px',width: '230px', backgroundColor: val.color, border:'none', textAlign: 'center',margin: '20px'}}>
+                  <Card style={{height:'300px',width: '230px', backgroundColor: val.color, border:'none', textAlign: 'center',margin: '8px'}}>
                     <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <Card.Title style={{ textAlign: 'center' }}>{val.nombre}</Card.Title>
                       <Card.Text style={{ textAlign: 'center' }}>

@@ -253,7 +253,7 @@ export const Calendario = () => {
               </Form.Group>
               <br></br>
               <Form.Group controlId="formEventColor">
-                <Form.Label>Color del evento:</Form.Label>
+                <Form.Label>Elegir sala:</Form.Label>
                 <Form.Control
                   as="select"
                   value={eventData.color}

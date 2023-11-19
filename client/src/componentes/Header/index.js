@@ -65,7 +65,7 @@ export const Header = ({ onLogout }) => {
                     </Nav>
                 </Navbar.Brand>
             </Container>
-            <div className="session-info" style={{ marginRight: '20px', fontWeight: '500', fontSize:'15px'  }}>SESIÓN DE : <br /> {nombreUsuario.toUpperCase()}</div>
+            <div className="session-info" style={{ marginRight: '30px', fontWeight: '500', fontSize:'13px'  }}>SESIÓN DE:  {nombreUsuario.toUpperCase()}</div>
             <Nav.Link to="/" onClick={handleLogout} style={{ marginRight: '20px' }}> {/* Ejecuta handleLogout en clic */}        
                 <box-icon name='log-out' size='30px' color='white'  ></box-icon>
             </Nav.Link>

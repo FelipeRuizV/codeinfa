@@ -60,7 +60,7 @@
 }
 
 .todopacientes2{
-  width: 1500px;
+  width: 1300px;
   margin-top: 20px;
 }
 /*--------------------------------------------------------------///////////////////////////////////////////////////////////////////*/
@@ -122,13 +122,13 @@
 }
 .buscarpacientesb{
   position: relative;
-  left: 1195px;
+  left: 950px;
   
 }
 .buscarpacientesc{
   position: relative;
   width: 150%;
-  left: 1100px;
+  left: 820px;
   
 }
 .añadirpacientesb button{
@@ -777,9 +777,10 @@ label strong {
   margin-left: 10px;
 }
 .TablaRiesgoTotal{
-  width: 1298px !important;
+  width: 1110px !important;
   margin: auto;
- 
+  border: 4px solid #ddd; /* O el color que desees */
+  border-collapse: collapse;
 }
 
 .ContenedorTablaR{
@@ -819,8 +820,9 @@ label strong {
 
 .notas-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: none;
+  gap: none;
   border: 2px solid rgb(85, 85, 85);
 }
 
@@ -837,7 +839,7 @@ label strong {
   font-weight: italic;
   border: none;
   position: relative;
-  left: 338px;
+  left: 260px;
   height: 100%;
 }
 

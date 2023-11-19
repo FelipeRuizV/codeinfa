@@ -42,15 +42,6 @@ export const Login = ({ onLogin }) => {
     setState(e.target.value);
   };
 
-  const reloadPage = () => {
-    window.location.reload();
-  };
-
-  const handleLoginAndReload = () => {
-    handleLogin();
-    reloadPage();
-  };
-
   return (
     <div className="login-container">
     <div className="login">
@@ -105,18 +96,15 @@ export const Login = ({ onLogin }) => {
           <br/>
 
           <div className="d-flex justify-content-center">
-              <button
-                type="button"
-                className="btn btn-primary w-50 rounded-5 my-auto"
-                onClick={handleLoginAndReload}
-              >
-                INGRESAR
-              </button>
 
-              <Link to="/" type="button" className="btn btn-success w-50 rounded-5 my-auto" onClick={handleLogin}>
-                INGRESAR (sin recargar)
-              </Link>
-            </div>
+           
+            
+            <Link to='/' type="button" className="btn btn-success w-50 rounded-5 my-auto" onClick={handleLogin}>
+              INGRESAR
+            </Link>
+         
+
+          </div>
         </div>
       </div>
     </div>
