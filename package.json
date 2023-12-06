@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
     "start-client": "cd client && npm start",
-    "start-server": "cd server && sudo node index.js"  
+    "start-server": "cd server && node index.js"  
 
   }
 }
