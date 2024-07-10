@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
+<<<<<<< HEAD
+=======
+const port= 3001;
+>>>>>>> c673d36aa411eb26ce167d34f17cedbd8bd3b9c5
 
 app.use(cors());
 app.use(express.json());
@@ -576,6 +580,16 @@ app.delete("/riesgo/:rut_usuario", (req, res) => {
 
 
 
+<<<<<<< HEAD
 app.listen(3001, ()=>{
     console.log("Corriendo en el puerto 3001")
 })
+=======
+// app.listen(3001, ()=>{
+//     console.log("Corriendo en el puerto 3001")
+// })
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor escuchando en http://0.0.0.0:${port}`);
+});
+>>>>>>> c673d36aa411eb26ce167d34f17cedbd8bd3b9c5

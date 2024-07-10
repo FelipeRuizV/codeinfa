@@ -154,6 +154,7 @@ export const Pacientes = () => {
                                 </div>
                             </Col>
 
+<<<<<<< HEAD
                             <Col xs="auto">
                                 <div className="añadirpacientesb">
                                     
@@ -163,6 +164,9 @@ export const Pacientes = () => {
                                 </div>
                             </Col>
 
+=======
+                          
+>>>>>>> c673d36aa411eb26ce167d34f17cedbd8bd3b9c5
                         </Row>
                     </div>
                     <div className='table-container'>

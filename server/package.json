@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && node index.js"  
+>>>>>>> c673d36aa411eb26ce167d34f17cedbd8bd3b9c5
   },
   "author": "",
   "license": "ISC",
@@ -13,4 +20,8 @@
     "express": "^4.18.2",
     "mysql": "^2.18.1"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c673d36aa411eb26ce167d34f17cedbd8bd3b9c5
