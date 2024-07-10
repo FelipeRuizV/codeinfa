@@ -1,0 +1,913 @@
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+* {
+  margin: 0;
+  padding:0;
+  font-family: Product Sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.App::before {
+  content: "";
+  background-image: url(../../client/src/images/fondologin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca la capa por debajo de los demás elementos de .App */
+  opacity: 0.3; /* Ajusta la opacidad al valor que desees (0.0 a 1.0) */
+
+}
+
+ .App {
+  display: grid ;
+
+  height: 100%; /* Altura completa del viewport */
+  
+}
+
+
+.main-container {
+  padding: 0px; /* Espacio de relleno para separar el contenido de la barra lateral */
+  width: 100%;
+  align-items: center;
+}
+
+
+/* Estilo base para la barra lateral */
+
+/* Estilo del logo */
+
+.session-info {
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3); /* Contorno con desplazamiento hacia arriba y hacia la izquierda */
+}
+.todopacientes1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todopacientes2{
+  width: 1300px;
+  margin-top: 20px;
+}
+/*--------------------------------------------------------------///////////////////////////////////////////////////////////////////*/
+
+
+
+
+/* Estilo para el título "VER INFO" */
+.titulopaciente {
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  width: 400%;
+}
+/* Estilo para el título "Administración de Usuaries" */
+.titulopacientes {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+/* Estilo para los botones "Editar", "Eliminar" y "Ver info" */
+
+.editarb button{ /*color del botón de editar*/
+  width: 100%;
+  color: black;
+  background-color: #bdecb6;
+  border: none;
+
+}
+.editarb button:hover{
+  background-color: #9cd694;
+  color: black;
+  border: none;
+}
+
+.eliminarb button{ /*color del botón de eliminar*/
+  background-color: #ffa3a8;
+}
+
+.eliminarb button:hover{
+  color: black;
+  background-color: #d67a7f;
+}
+
+.verinfob button{  /*color del botón de ver info*/
+  background-color: #98d4ff;
+}
+
+.verinfob button:hover{
+  color: black;
+  background-color: #74afda;
+}
+
+/* Estilo para el botón "Añadir Usuarie" */
+.añadirpacientesb{
+  position: relative;
+  left: -327px;
+}
+.buscarpacientesb{
+  position: relative;
+  left: 950px;
+  
+}
+.buscarpacientesc{
+  position: relative;
+  width: 150%;
+  left: 820px;
+  
+}
+.añadirpacientesb button{
+  color: black;
+  background-color: #c3c3f5;
+  left: 100%;
+  font-weight: italic;
+}
+.añadirpacientesb button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+/* Estilo para el botón "buscar usuarie" */
+.buscarpacientesb button{
+  background-color: #c3c3f5;
+}
+.buscarpacientesb button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+/* Estilo para la tabla */
+.table {
+  border-collapse: collapse;
+  font-weight:500;
+}
+
+/* Estilo para las celdas de la tabla */
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  
+}
+
+/* Estilo para el encabezado de la tabla */
+.table thead th {
+  color: black;
+}
+
+/* Estilo para las filas impares de la tabla */
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para los botones en las celdas de la tabla */
+.table .btn {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Estilo para el botón "Añadir Usuarie" en la esquina superior derecha */
+.todo123 {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+/* Estilo para la modal de edición */
+.modal-content {
+  border-radius: 0;
+}
+/* Estilo para los botones "Actualizar" y "Cancelar" en la modal de edición */
+.modalboton22b1 .btn,
+.modalboton22b2 .btn {
+  margin-right: 10px;
+}
+
+/* Estilo para el logo en la esquina superior izquierda */
+.logo img {
+  width: 50px; /* Ajusta el tamaño del logo según tu preferencia */
+}
+
+/* Estilo para la columna de "Encargado" en la tabla */
+.table tbody td:nth-child(3) {
+  color: #74afda;
+}
+
+/* Estilo para la columna de "PRIORIDAD" en la tabla */
+.table tbody td:nth-child(4) {
+  font-weight: bold;
+}
+
+/* Estilo para el enlace "USUARIES" en la barra lateral */
+.sidebar-buttons li:nth-child(4) {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Estilo para el enlace "CALENDARIO" en la barra lateral */
+.sidebar-buttons li:nth-child(8) {
+  font-weight: bold;
+  color: #e83e8c;
+}
+
+.modalboton22b2 button{ /*botón de cancelar*/
+  color: black;
+  background-color: #ffa3a8;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+.modalboton22b2 button:hover{
+  color: black;
+  background-color: #d67a7f;
+}
+
+.modalboton22b1 button{  /*botón actualizar editar*/
+  color: black;
+  background-color: #bdecb6;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+.modalboton22b1 button:hover{
+  color: black;
+  background-color: #9cd694;
+}
+
+.infopacientes1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.agregarpacientes1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.bg-white {
+  /* Cambia el fondo blanco a transparente */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+label strong {
+  font-weight: bold;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0 !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 1rem;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.btn-success {
+  background-color: #28a745 !important;
+  color: #ffffff !important;
+  border: none !important;
+  
+ 
+}
+
+.btn-success:hover {
+  background-color: #218838 !important;
+}
+
+.bodyc{
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.day1{
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.today1{
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+
+/*-----------------------Calendario--------------------------*/
+
+/* Estilo para el título "Administración de Usuaries" */
+.titulocomunidad {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.com {
+  flex: 1;
+  max-width: calc(25% - 20px); /* 25% del ancho del contenedor menos el espacio entre empleados */
+  margin-right: 20px;
+  
+}
+
+.color-options-container {
+  margin-top:6px;
+  margin-left:35px;
+  display: flex; /* Muestra los radio buttons en línea */
+  gap: 20px; /* Agrega un espacio entre las opciones de color */
+}
+
+.nota-card {
+  text-align: center;
+  display: flex;
+
+}
+
+
+.custom-card {
+  height: 100%; /* Set the desired height for the Card */
+}
+
+.buttons-container{
+    top: 10px;
+}
+
+.navbar1 {
+  background-image: linear-gradient(to bottom, #9a9af6, #bdacf5, #d7c1f5, #ebd8f7, #f9f0fb);
+  height: 100%;
+}
+
+
+.nav-link{
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 23px!important;
+}
+
+.nav-link:hover{
+  color: rgb(168, 166, 166) !important;
+}
+.navbar1 .custom-brand .mr-auto .nav-link {
+  margin-right: 30px; /* Agrega espacio entre los elementos Nav.Link */
+}
+
+
+.carousel-container {
+  max-width: 1000px; /* Ajusta el ancho máximo según tus preferencias */
+  max-height: 300px; /* Ajusta la altura máxima según tus preferencias */
+  margin: 0 auto; /* Centra horizontalmente el carousel */
+}
+
+.carousel-item {
+  height: 330px; /* Establece la altura deseada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item2 {
+  height: 1000px; /* Establece la altura deseada */
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev{
+  max-width: 50px;
+}
+
+.carousel-control-next {
+  max-width: 50px; /* Establece el ancho máximo deseado */
+  left:100%;
+}
+.anuncio-card {
+  max-height: 400px; /* Establece la altura máxima deseada para las tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.anuncio-card .card-text {
+  max-height: 200px; /* Establece la altura fija deseada para el Card.Text */
+}
+/*----------------------ANUNCIOS Y RECORDATORIOS--------------------*/
+.anuncios-title{
+  text-align: center;
+}
+
+.boton-pauta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boton-pauta button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+  border: none;
+}
+
+.text-container {
+  flex: 1; /* Hace que ocupe todo el espacio disponible */
+  text-align: left; /* Centra el texto horizontalmente */
+}
+
+.boton-agregarnota{
+  text-align: center;
+}
+
+.custom-icon {
+  /* Change 'black' to the desired color for the icons */
+  filter: invert(100%);
+}
+
+.boton-redactar button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+  border: none;
+  position: relative;
+  left: 338px;
+}
+
+.boton-redactar button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+
+
+
+.boton-redactar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Espacio entre empleados */
+  margin-top: 20px;
+}
+.boton-redactar h2{
+  position: relative;
+  left: 100px;
+  color: black;
+}
+
+.boton-redactar1 button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+  border: none;
+
+}
+
+.boton-redactar1 button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+
+.boton-redactar1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-modal-header{
+  background-color: #91d2fd; /* Cambia el color de fondo a tu preferencia */
+  color: #000000; /* Cambia el color del texto a tu preferencia */
+}
+
+.custom-modal-footer{
+  display: flex;
+  justify-content: center!important;
+  align-items: center!important;
+}
+
+.custom-modal-body{
+  background-color: white;
+  border-bottom:none;
+}
+.custom-guardar-actualizar button{
+  background-color: #86cdfc;
+  border: none;
+   
+}
+
+.custom-botones-cancelar button{
+  background-color: #6e6e6e;
+  border:none !important;
+}
+.custom-botones-cancelar button:hover{
+  background-color: #464646;
+  border:none !important;
+}
+.custom-botones-guardar button{
+  background-color: #45adf3;
+  border:none;
+  margin:left;
+  font-weight: lighter;
+}
+.custom-modal-footer{
+  background-color: white !important;
+  border-top:none!important;
+}
+
+.modal-body .form-control{
+  border-radius: 6px !important; 
+  background-color: white;/* Ajusta el valor según la curvatura que deseas */
+  /* Otros estilos personalizados si es necesario */
+}
+  
+.anuncios-container{
+  margin-top: 30px;
+}
+/*---------------------CALENDARIO------------------*/
+
+.hacernota{
+  text-align:center;
+  margin-top: 20px;
+}
+
+.hacernota button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+  border: none;
+  position: relative;
+  left: 260px;
+}
+
+.hacernota button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+
+.hacernota {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;/* Espacio entre empleados */
+  margin-top: 20px;
+}
+.hacernota h2{
+  position: relative;
+  left: 100px;
+  color: black;
+}
+
+.calendario-container{
+  padding: 30px;
+}
+
+.boton-calendario button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+
+  border:none;
+}
+
+.boton-calendario button:hover{
+  color: black;
+  background-color: #a1a1d1;
+}
+
+.boton-calendario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Espacio entre empleados */
+  margin-bottom: 17px;
+  
+}
+.table-container {
+  max-height: 500px; /* Altura máxima que desees antes de que aparezca el scroll */
+  overflow-y: auto; /* Activar el scroll vertical cuando se excede la altura máxima */
+  
+}
+
+.link-sin-subrayado {
+  text-decoration: none; /* Quítale el subrayado */
+  color: black; /* Establece el color del texto a negro */
+  margin-left: 16px;
+}
+
+.comunidad-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 50px;
+}
+.todocomunidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+.fichatab{
+  font-weight: bold;
+  font-size: 20px;
+}
+.sesionestab{
+  font-weight: bold;
+  font-size: 20px;
+}
+.riesgotab{
+  font-weight: bold;
+  font-size: 20px;
+}
+.nav-tabs .nav-link.active {
+  background: #d4b1d4!important;
+  border: none !important;
+  padding: none;
+
+}
+
+.nav-tabs .nav-item .nav-link {
+  margin-top: 20px;
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 23px;
+  background: #dbcedb;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px 20px 0 0;
+}
+
+
+.nav-tabs {
+  border-bottom: none!important;
+}
+
+.titulostabla {
+  text-align: left !important;
+  padding-left: 30px !important;
+  
+}
+
+.tituloriesgo{
+  background-color:#c7e0c9 !important;  
+  text-align: left !important;
+  padding-left: 30px !important;
+}
+
+.TablaRiesgo{
+  
+  border-bottom: 0.1px   gray !important;
+}
+
+.numerotabla{
+
+  border-left: 0.1px  solid gray !important;
+  border-right: 0.1px  solid gray !important;
+  width: 50px;
+  height: 20px;
+}
+
+.numeritosTabla{
+  
+  width: 50px;
+  height: 20px;
+  padding: 0% !important;
+  margin: 0% !important;
+  line-clamp: 1;
+}
+
+.inputTabla{
+  border: none;
+  width: 50px !important;
+  height: 100% !important;
+  text-align: center;
+  line-clamp: 1;
+
+}
+
+.editarPauta{
+  display: flex;
+  font-size: 24;
+  width:  100px;
+  justify-content: right;
+  background-color: none;
+ 
+}
+
+.editarbut button{
+  color: red;
+  border:none;
+  width: 100px;
+}
+
+.editarPauta button:hover{
+  background-color: none;
+}
+
+.editaroff button{
+  background-color: pink;
+  align-items: right;
+  border:none;
+}
+
+.editaroff button:hover{
+  background-color: rgb(252, 151, 167);
+  border: none;
+}
+
+.editarguardar button{
+  color: #000000;
+  background-color: #bdecb6;
+  align-items: right;
+  border:none;
+}
+
+.editarguardar button:hover{
+  color: black;
+  background-color: #9cd694;
+  border: none;
+}
+.botones-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.derecha {
+  display: flex;
+  
+}
+.derecha button {
+  margin-left: 10px;
+}
+.TablaRiesgoTotal{
+  width: 1110px !important;
+  margin: auto;
+  border: 4px solid #ddd; /* O el color que desees */
+  border-collapse: collapse;
+}
+
+.ContenedorTablaR{
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.numerotablatot{
+  
+  width: 50px;
+  height: 20px;
+  border:  solid white !important;
+
+}
+
+
+
+.tituloriesgoTot{
+  justify-content: center !important;
+  background-color:#c7e0c9 !important; 
+  text-align: center !important;
+ }
+
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-arrow {
+  -webkit-appearance: none; /* Para Safari, Chrome y Opera */
+  -moz-appearance: textfield; /* Para Firefox */
+  appearance: none; /* Propiedad estándar */
+}
+
+.notas-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: none;
+  gap: none;
+  border: 2px solid rgb(85, 85, 85);
+}
+
+.todonotas {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /*Centrar verticalmente */
+  
+}
+.notabutton button{
+  color: black;
+  background-color: #c3c3f5;
+  font-weight: italic;
+  border: none;
+  position: relative;
+  left: 260px;
+  height: 100%;
+}
+
+.listaEsperaInfo{
+
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fondologin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container body {
+  margin: 50px;
+}
+
+.login-container ::-webkit-input-placeholder {
+  direction: rtl;
+}
+
+.login-container fieldset.form-group {
+  position: relative;
+}
+
+.login-container label {
+  position: absolute;
+  top: 0.4rem;
+  left: 1rem;
+  transition: all 0.1s ease-in-out;
+  cursor: text;
+}
+
+.login-container .form-group label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s;
+  color: #6c757d;
+}
+
+.login-container .form-group.active label {
+  top: -1.2rem;
+  background: transparent;
+  color: #000000;
+}
+
+.login-container .form-group.focused label,
+.login-container .form-group input:focus + label {
+  top: -1.2rem;
+  background: transparent;
+  color: #000000;
+}
